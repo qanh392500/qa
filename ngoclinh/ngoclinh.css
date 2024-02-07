@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap');
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #2c3e50
+}
+
+.box {
+	width: 1000px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+}
+
+#pinkboard {
+	position: relative;
+	margin: auto;
+	height: 750px;
+	width: 750px;
+	animation: animate 1.2s infinite;
+}
+
+#pinkboard:before, #pinkboard:after {
+	content: '';
+	position: absolute;
+	background: #c52323;
+	width: 100px;
+	height: 160px;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+}
+
+#pinkboard:before {
+	left: 100px;
+	transform: rotate(-45deg);
+	transform-origin: 0 100%;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+				0 10px 10px rgba(0,0,0,0.22);
+}
+
+#pinkboard:after {
+	left: 0;
+	transform: rotate(45deg);
+	transform-origin: 100% 100%;
+}
+
+@keyframes animate {
+	0% {
+		transform: scale(1);
+	}
+	30% {
+		transform: scale(.8);
+	}
+	60% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+.name{
+ font-family: 'Mr Dafoe';
+  margin: 0;
+  font-size: 2.5em;
+  margin-top: -0.6em;
+  color: white;
+  text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+  transform: rotate(-7deg);
+   z-index:1000
+}
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.pulsing-glowing-text {
+  font-family: 'Pacifico', cursive;
+  font-size: 48px;
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  100% {
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #f09,
+      0 0 80px #f09,
+      0 0 90px #f09,
+      0 0 100px #f09,
+      0 0 150px #f09;
+  }
+  0% {
+    text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #f09,
+      0 0 45px #f09,
+      0 0 55px #f09,
+      0 0 70px #f09,
+      0 0 80px #f09;
+  }
+}
